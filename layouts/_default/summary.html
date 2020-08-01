@@ -1,0 +1,21 @@
+<article class="post">
+    <header>
+        <h2><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
+        <div class="summary-meta">
+            <div class="date">{{ .Date.Format "2006-01-02" }}</div>
+            {{ range .Params.categories }}
+                <div class="category">
+                    <a href="categories/{{ . | urlize }}">{{ . }}</a>
+                </div>
+            {{ end }}
+        </div>
+    </header>
+    {{ if isset .Params "description" }}
+    {{ .Description }}
+    {{ else }}
+    {{ .Summary }}
+    {{ end }}
+    <footer>
+        <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+    </footer>
+</article>

@@ -1,0 +1,20 @@
+<div>
+    <h1 class="title">{{.Site.Title}}</h1>
+    <h2 class="subtitle">{{.Site.Params.Subtitle}}</h2>
+    <div class="social">
+        {{ range .Site.Params.social }}
+            <div class="social-icon">
+                <a href="{{ .url }}" title="{{ .name }}">
+                    <i class="{{ .type }} fa-{{ .icon }}"></i>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+    <div class="menu">
+        {{ range .Site.Menus.main }}
+            <div class="menu-item">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </div>
+        {{ end }}
+    </div>
+</div>

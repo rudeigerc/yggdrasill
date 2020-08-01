@@ -1,0 +1,11 @@
+<footer>
+  <div>
+    <p class="footer">
+      {{ with .Site.Copyright }} {{ . }} {{ end }}<br>
+      Theme Yggdrasill | Powered by <a href="https://gohugo.io">Hugo</a>
+    </p>
+  </div>
+</footer>
+{{ if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
