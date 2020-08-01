@@ -7,6 +7,12 @@ The design is partially inspired by [vividvilla/ezhil](https://github.com/vividv
 
 Please visit https://rudeigerc.dev for latest demo of the theme. The theme is under development and the styles may not remain the same.
 
+## Installation
+
+```shell
+$ git submodule add https://github.com/rudeigerc/yggdrasill themes/yggdrasill
+```
+
 ## License
 
 MIT
