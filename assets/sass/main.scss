@@ -1,18 +1,44 @@
 $base-color: #2E5C6E;
 
 body {
-    font-family: "Source Han Sans", sans-serif;
+    font-family: "PingFang SC", "Helvetica Neue", sans-serif;
     max-width: 1024px;
     margin: 5rem auto;
 }
 
+code {
+    font-family: "Cascadia Code", monospace;
+    font-size: 10pt;
+}
+
+table {
+    width: 100%;
+}
+
+em {
+    font-family: "Times New Roman", "PingFang SC", "Helvetica Neue", sans-serif;
+}
+
+:not(pre) > code {
+    padding: 0 .1rem;
+    background-color: rgba(0,0,0,.05);
+}
+
 .title {
-    margin: 0
+    font-weight: 300;
+    margin: 0;
 }
 
 .subtitle {
+    font-weight: 300;
     color: rgba(0,0,0,.5);
     margin: 0;
+    border-bottom: none;
+}
+
+.post-title {
+    margin-bottom: 0;
+    border-bottom: none;
 }
 
 // unordered list
@@ -51,18 +77,19 @@ ol > li {
 
 // headings
 h1 {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h2 {
     font-size: 16pt;
-    font-weight: 400;
-    margin-bottom: .25rem;
+    font-weight: 500;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 h3 {
     font-size: 15pt;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 h4 {
@@ -72,7 +99,7 @@ h4 {
 
 h5 {
     font-size: 13pt;
-    font-weight: 300;
+    font-weight: 350;
 }
 
 h6 {
@@ -104,14 +131,14 @@ div:not(.category, .tag) > a:hover {
 .summary-meta {
     display: flex;
     color: gray;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-bottom: 1rem;
     align-items: center;
 }
 
 .tags {
     display: flex;
-    font-size: 8pt;
+    font-size: 10pt;
     align-items: center;
 }
 

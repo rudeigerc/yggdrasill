@@ -2,13 +2,15 @@
 <section id="main">
     <h1 id="title">{{ .Title }}</h1>
     <div class="single date">{{ .Date.Format "2006-01-02" }}</div>
-    <div class="tags">
-        {{ range .Params.tags }}
-            <div class="tag">
-                <a href="tags/{{ . | urlize }}">#{{ . }}</a>
-            </div>
-        {{ end }}
-    </div>
+    {{ with .Params.tags }}
+        <div class="tags">
+            {{ range . }}
+                <div class="tag">
+                    <a href="tags/{{ . | urlize }}">#{{ . }}</a>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
     <div>
         <article id="content">
             {{ .Content }}
