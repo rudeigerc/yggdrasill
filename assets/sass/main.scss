@@ -247,8 +247,6 @@ div.tag > a {
 // list
 .list-item {
     display: flex;
-    height: 1.5rem;
-    line-height: 1.5rem;
     align-items: center;
     margin: .5rem 0;
 }
@@ -257,7 +255,7 @@ div.tag > a {
     font-size: 10pt;
     color: rgba($color: black, $alpha: .5);
     margin-right: .25rem;
-    width: 6rem;
+    min-width: 5rem;
     text-align: left;
 }
 
@@ -265,5 +263,17 @@ div.tag > a {
     body {
         margin: 2rem;
         font-size: 10pt;
+    }
+
+    .title {
+        font-size: 14pt;
+    }
+
+    .subtitle {
+        font-size: 14pt;
+    }
+
+    .post-title {
+        font-size: 12pt;
     }
 }
