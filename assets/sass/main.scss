@@ -228,6 +228,7 @@ div.tag > a {
     font-size: 8pt;
 }
 
+// pagination
 .pagination {
     display: flex;
     padding-left: 0;
@@ -241,6 +242,23 @@ div.tag > a {
 .pagination .page-link {
     padding: .25rem .75rem;
     border: 1px solid rgba(0,0,0,.1);
+}
+
+// list
+.list-item {
+    display: flex;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.list-item-date {
+    font-size: 10pt;
+    color: rgba($color: black, $alpha: .5);
+    margin-right: .25rem;
+    width: 6rem;
+    text-align: left;
 }
 
 @media (max-width: 1024px) {
