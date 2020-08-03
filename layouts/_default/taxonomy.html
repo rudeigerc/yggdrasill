@@ -5,8 +5,11 @@
         {{ with .Data.Terms }}
             <div class="tags">
                 {{ range .Alphabetical }}
-                    <div class="tag">
+                    <div class="taxonomy tag">
                         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                        <div class="count">
+                            {{ .Count }}
+                        </div>
                     </div>
                 {{ end }}
             </div>
