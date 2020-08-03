@@ -11,7 +11,7 @@
         <div class="summary-meta">
             <div class="date">{{ .Date.Format "2006-01-02" }}</div>
             {{ range .Params.categories }}
-            <a href="categories/{{ . | urlize }}">
+            <a href="/categories/{{ . | urlize }}">
                 <div class="category">
                     {{ . }}
                 </div>
