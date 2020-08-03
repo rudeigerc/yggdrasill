@@ -5,12 +5,14 @@
         {{ with .Data.Terms }}
             <div class="tags">
                 {{ range .Alphabetical }}
-                    <div class="taxonomy tag">
-                        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-                        <div class="count">
-                            {{ .Count }}
+                    <a class="taxonomy-link" href="{{ .Page.Permalink }}">
+                        <div class="taxonomy tag">
+                            {{ .Page.Title }}
+                            <div class="count">
+                                {{ .Count }}
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 {{ end }}
             </div>
         {{ else }}

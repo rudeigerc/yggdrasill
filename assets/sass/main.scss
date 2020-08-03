@@ -100,11 +100,9 @@ blockquote {
 a {
     color: $base-color;
     text-decoration: none;
-}
-
-div:not(.category, .tag) > a:hover {
-    color: $base-color;
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 i {
@@ -158,12 +156,6 @@ i {
     align-items: center;
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 10pt;
-    align-items: center;
-}
 
 .date {
     margin-right: .5rem;
@@ -174,6 +166,7 @@ i {
     font-size: 8pt;
 }
 
+// categories
 .category {
     color: $base-color;
     border: 1px solid $base-color;
@@ -182,9 +175,21 @@ i {
     padding: 0 .5rem;
     height: 1.5rem;
     line-height: 1.5rem;
+    &:hover {
+        background-color: rgba($color: $base-color, $alpha: .1);
+    }
+}
+
+// tags
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10pt;
+    align-items: center;
 }
 
 .tag {
+    color: white;
     background-color: $base-color;
     border: 1px solid $base-color;
     border-radius: .75rem;
@@ -192,6 +197,10 @@ i {
     padding: 0 .5rem;
     height: 1.5rem;
     line-height: 1.5rem;
+    &:hover {
+        background-color: rgba($color: $base-color, $alpha: .9);
+        border-color: rgba($color: $base-color, $alpha: .9);
+    }
 }
 
 .taxonomy.tag {
