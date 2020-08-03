@@ -1,6 +1,13 @@
 <article class="post">
     <header>
-        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
+        <h2 class="post-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ if .Draft }}
+                <strong class="draft-tag">
+                    DRAFT
+                </strong>
+            {{end}}
+        </h2>
         <div class="summary-meta">
             <div class="date">{{ .Date.Format "2006-01-02" }}</div>
             {{ range .Params.categories }}

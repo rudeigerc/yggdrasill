@@ -144,6 +144,14 @@ i {
     border-bottom: none;
 }
 
+.draft-tag {
+    font-size: 10pt;
+    color: white;
+    background-color: $base-color;
+    border: 1px solid $base-color;
+    padding: 0 .5rem;
+}
+
 .post {
     margin-bottom: 1.5rem;
 }
@@ -155,7 +163,6 @@ i {
     margin-bottom: 1rem;
     align-items: center;
 }
-
 
 .date {
     margin-right: .5rem;
