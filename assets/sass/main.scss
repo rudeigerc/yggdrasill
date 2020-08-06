@@ -8,7 +8,9 @@ body {
 }
 
 img {
-    max-width: -webkit-fill-available;
+    display: flex;
+    margin: 0 auto;
+    max-width: 60%;
     max-height: -webkit-fill-available;
 }
 
@@ -288,6 +290,11 @@ div.tag > a {
     body {
         margin: 2rem;
         font-size: 10pt;
+    }
+
+    img {
+        max-width: -webkit-fill-available;
+        max-height: -webkit-fill-available;
     }
 
     .title {
