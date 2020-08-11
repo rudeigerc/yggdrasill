@@ -3,14 +3,18 @@ $secondary: #B54434;
 
 body {
     font-family: "PingFang SC", "Helvetica Neue", sans-serif;
-    max-width: 1024px;
+    max-width: 768px;
     margin: 5rem auto;
+}
+
+p {
+    line-height: 1.6;
 }
 
 img {
     display: flex;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 60%;
 }
 
 figcaption {
@@ -294,7 +298,7 @@ div.tag > a {
     align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     body {
         margin: 2rem;
         font-size: 10pt;
@@ -311,9 +315,7 @@ div.tag > a {
     .post-title {
         font-size: 12pt;
     }
-}
 
-@media (max-width: 768px) {
     img {
         max-width: -webkit-fill-available;
         max-height: -webkit-fill-available;
