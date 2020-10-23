@@ -11,5 +11,8 @@
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Font Awesome 6 -->
 <script src="https://kit.fontawesome.com/ab13fc9725.js" crossorigin="anonymous"></script>

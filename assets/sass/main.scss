@@ -2,7 +2,7 @@ $primary: #2E5C6E;
 $secondary: #B54434;
 
 body {
-    font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+    font-family: "Roboto", "PingFang SC", "Helvetica Neue", sans-serif;
     max-width: 768px;
     margin: 5rem auto;
 }
@@ -27,8 +27,15 @@ figcaption > h4 {
 }
 
 code {
-    font-family: "Cascadia Code", monospace;
-    font-size: 10pt;
+    font-family: "Fira Code", monospace;
+}
+
+pre {
+    background-color: #FCFCFC;
+    padding: .5rem;
+    & > code {
+        font-size: 10pt;
+    }
 }
 
 table {
@@ -41,7 +48,8 @@ em {
 
 :not(pre) > code {
     padding: 0 .1rem;
-    background-color: rgba(0,0,0,.05);
+    color: $primary;
+    background-color: #F0F0F0;
 }
 
 // unordered list
@@ -80,10 +88,12 @@ ol > li {
 
 // headings
 h1 {
-    font-weight: 600;
+    color: $primary;
+    font-weight: 500;
 }
 
 h2 {
+    color: $primary;
     font-size: 16pt;
     font-weight: 500;
     padding-bottom: .3rem;
@@ -121,7 +131,8 @@ a {
     color: $primary;
     text-decoration: none;
     &:hover {
-        text-decoration: underline;
+        color: rgba($color: $primary, $alpha: .8);
+        transition: color 0.5s ease;
     }
 }
 
@@ -145,6 +156,7 @@ i {
     display: flex;
     justify-content: flex-end;
     margin-bottom: .3rem;
+    min-height: 1rem;
 }
 
 .social-icon {
@@ -204,6 +216,7 @@ i {
     line-height: 1.5rem;
     &:hover {
         background-color: rgba($color: $primary, $alpha: .1);
+        transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     }
 }
 
@@ -225,8 +238,9 @@ i {
     height: 1.5rem;
     line-height: 1.5rem;
     &:hover {
-        background-color: rgba($color: $primary, $alpha: .9);
-        border-color: rgba($color: $primary, $alpha: .9);
+        background-color: rgba($color: $primary, $alpha: .8);
+        border-color: rgba($color: $primary, $alpha: .8);
+        transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     }
 }
 
@@ -296,6 +310,10 @@ div.tag > a {
     margin: 1rem 0;
     display: flex;
     align-items: center;
+}
+
+section.footnotes p {
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
