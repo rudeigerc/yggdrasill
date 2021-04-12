@@ -52,40 +52,6 @@ em {
     background-color: #F0F0F0;
 }
 
-// unordered list
-ul:not(.pagination) {
-    list-style: none;
-}
-
-ul:not(.pagination) > li::before {
-    content: "\2022";
-    color: $primary;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-// ordered list
-:not(.footnotes) > ol {
-    list-style: none;
-    counter-reset: li;
-}
-
-:not(.footnotes) > ol > li::before {
-    content: '.'counter(li);
-    color: $primary;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
-    margin-right: 0.5em;
-    text-align: right;
-    direction: rtl;
-}
-
-ol > li {
-    counter-increment: li;
-}
-
 // headings
 h1 {
     color: $primary;
