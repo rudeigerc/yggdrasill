@@ -28,16 +28,24 @@ figcaption > h4 {
 
 // pre + code
 pre {
-    border: 1px solid #EAEAEA;
-    padding: 1rem;
     overflow: auto;
     & > code {
         font-size: 10pt;
     }
 }
 
+:not(td) > pre {
+    border: 1px solid #EAEAEA;
+    padding: 1rem;
+}
+
 code {
     font-family: "Fira Code", monospace;
+}
+
+div.highlight table {
+    border: 1px solid #EAEAEA;
+    padding: 0 1rem;
 }
 
 :not(pre) > code {
