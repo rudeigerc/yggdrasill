@@ -22,7 +22,7 @@
     });
 </script>
 
-{{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <!-- Google Fonts -->

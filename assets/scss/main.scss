@@ -5,6 +5,7 @@ body {
     font-family: "Roboto", "PingFang SC", "Helvetica Neue", sans-serif;
     max-width: 768px;
     margin: 5rem auto;
+    font-weight: 300;
 }
 
 p {
@@ -28,14 +29,15 @@ figcaption > h4 {
 
 // pre + code
 pre {
+    border-radius: 6px;
     overflow: auto;
     & > code {
-        font-size: 10pt;
+        font-weight: 400;
+        font-size: 12px;
     }
 }
 
 :not(td) > pre {
-    border: 1px solid #EAEAEA;
     padding: 1rem;
 }
 
@@ -122,6 +124,15 @@ a {
 
 i {
     color: $primary
+}
+
+dt {
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .title {
