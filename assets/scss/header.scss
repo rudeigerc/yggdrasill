@@ -1,0 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1, h2 {
+    color: $color-theme-primary;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: "Noto Sans", "PingFang SC", "Helvetica Neue", sans-serif;;
+    font-size: 20px;
+    padding-bottom: .3em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4, h5, h6 {
+    font-size: 16px;
+}
+

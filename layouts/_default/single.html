@@ -17,6 +17,9 @@
         <article id="content">
             {{ .Content }}
         </article>
+        <aside>
+            {{ .TableOfContents }}
+        </aside>
     </div>
     {{ partial "disqus.html" . }}
 </section>
