@@ -1,9 +1,16 @@
-@import "constants.scss";
+@import "variables.scss";
 
 @import "header.scss";
 @import "table.scss";
+@import "code.scss";
 @import "pagination.scss";
 @import "toc.scss";
+
+@import "404.scss";
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Roboto, "PingFang SC", "Helvetica Neue", sans-serif;
@@ -14,6 +21,13 @@ body {
     margin: 5rem auto;
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+}
+
+article#content {
+    li, dt {
+        margin: 12px 0;
+        padding: 0;
+    }
 }
 
 p {
@@ -33,46 +47,6 @@ figcaption {
 figcaption > h4 {
     font-size: 12pt;
     color: rgba(0,0,0,.5);
-}
-
-// pre + code
-pre {
-    border-radius: 6px;
-    overflow: auto;
-    & > code {
-        font-weight: 400;
-        font-size: 12px;
-    }
-}
-
-:not(td) > pre {
-    padding: 1rem;
-}
-
-code {
-    font-family: "Fira Code", monospace;
-}
-
-div.highlight table {
-    border: 1px solid #EAEAEA;
-    padding: 0 1rem;
-}
-
-:not(pre) > code {
-    font-size: 90%;
-    font-weight: 500;
-    color: $color-theme-primary;
-    margin: 0 2px;
-    padding: 0 5px;
-    background-color: #F8F8F8;
-    word-break: break-word;
-}
-
-article#content {
-    li, dt {
-        margin: 12px 0;
-        padding: 0;
-    }
 }
 
 blockquote {
@@ -256,17 +230,6 @@ div.tag > a {
     margin-right: .25rem;
     min-width: 5rem;
     text-align: left;
-}
-
-.not-found {
-    color: $color-theme-secondary;
-    border: 3px solid $color-theme-secondary;
-    height: 3rem;
-    border-radius: .5rem;
-    padding: 1rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
 }
 
 section.footnotes p {

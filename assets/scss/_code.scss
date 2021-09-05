@@ -1,0 +1,31 @@
+pre {
+    border-radius: 6px;
+    overflow: auto;
+    & > code {
+        font-weight: 400;
+        font-size: 12px;
+    }
+}
+
+:not(td) > pre {
+    padding: 1rem;
+}
+
+code {
+    font-family: "Fira Code", monospace;
+}
+
+div.highlight table {
+    border: 1px solid #EAEAEA;
+    padding: 0 1rem;
+}
+
+:not(pre) > code {
+    font-size: 90%;
+    font-weight: 500;
+    color: $color-theme-primary;
+    margin: 0 2px;
+    padding: 0 5px;
+    background-color: #F8F8F8;
+    word-break: break-word;
+}
