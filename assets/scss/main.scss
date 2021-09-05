@@ -23,6 +23,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+div#content {
+    min-height: calc(100vh - 354px);
+}
+
 article#content {
     li, dt {
         margin: 12px 0;
@@ -81,6 +85,10 @@ dt {
 hr {
     border: none;
     border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.meta {
+    height: 120px
 }
 
 .title {
