@@ -7,11 +7,15 @@ aside {
 
   ul,
   li {
-    padding-left: 8px;
-    list-style: none;
-  }
+    a {
+      color: $color-text-secondary;
 
-  nav#TableOfContents {
-    border-left: 5px solid $color-theme-primary;
+      &:hover {
+        color: $color-theme-primary;
+      }
+    }
+
+    padding-left: .5em;
+    list-style: none;
   }
 }
