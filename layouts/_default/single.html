@@ -1,26 +1,26 @@
 {{ define "main" }}
 <section id="main">
-    <h1 id="title">{{ .Title }}</h1>
-    <div class="single date">{{ .Date.Format "2006-01-02" }}</div>
-    {{ with .Params.tags }}
-        <div class="tags">
-            {{ range . }}
-            <a href="/tags/{{ . | urlize }}">
-                <div class="tag">
-                    #{{ . }}
-                </div>
-            </a>
-            {{ end }}
-        </div>
+  <h1 id="title">{{ .Title }}</h1>
+  <div class="single date">{{ .Date.Format "2006-01-02" }}</div>
+  {{ with .Params.tags }}
+  <div class="tags">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}">
+      <div class="tag">
+        #{{ . }}
+      </div>
+    </a>
     {{ end }}
-    <div class="container">
-        <article id="content">
-            {{ .Content }}
-        </article>
-        <aside>
-            {{ .TableOfContents }}
-        </aside>
-    </div>
-    {{ partial "giscus.html" . }}
+  </div>
+  {{ end }}
+  <div class="container">
+    <article id="content">
+      {{ .Content }}
+    </article>
+    <aside>
+      {{ .TableOfContents }}
+    </aside>
+  </div>
+  {{ partial "giscus.html" . }}
 </section>
 {{ end }}

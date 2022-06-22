@@ -1,25 +1,25 @@
 {{ define "main" }}
-<main>
-    <div>
-        <h1>{{ .Title }}</h1>
-        {{ with .Data.Terms }}
-            <div class="tags">
-                {{ range .Alphabetical }}
-                    <a class="taxonomy-link" href="{{ .Page.Permalink }}">
-                        <div class="taxonomy tag">
-                            {{ .Page.Title }}
-                            <div class="count">
-                                {{ .Count }}
-                            </div>
-                        </div>
-                    </a>
-                {{ end }}
-            </div>
-        {{ else }}
-            {{ range .Pages }}
-                {{ .Render "summary"}}
-            {{ end }}
-        {{ end }}
+<main aria-role="main">
+  <div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Data.Terms }}
+    <div class="tags">
+      {{ range .Alphabetical }}
+      <a class="taxonomy-link" href="{{ .Page.Permalink }}">
+        <div class="taxonomy tag">
+          {{ .Page.Title }}
+          <div class="count">
+            {{ .Count }}
+          </div>
+        </div>
+      </a>
+      {{ end }}
     </div>
+    {{ else }}
+    {{ range .Pages }}
+    {{ .Render "summary"}}
+    {{ end }}
+    {{ end }}
+  </div>
 </main>
 {{ end }}

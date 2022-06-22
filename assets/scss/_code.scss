@@ -1,8 +1,9 @@
 pre {
+    border: 1px solid #EAEAEA;
     border-radius: 6px;
     overflow: auto;
     & > code {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
     }
 }
