@@ -1,3 +1,26 @@
+@for $i from 1 through 6 {
+  article {
+    h#{$i} {
+      .fa-link {
+        vertical-align: middle;
+        visibility: hidden;
+      }
+
+      &:hover {
+        .fa-link {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+article .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -29px;
+}
+
 aside {
   position: fixed;
   width: 400px;
