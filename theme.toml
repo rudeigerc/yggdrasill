@@ -5,10 +5,13 @@ name = "Yggdrasill"
 license = "MIT"
 licenselink = "https://github.com/rudeigerc/yggdrasill/blob/master/LICENSE"
 description = "A minimal theme."
-homepage = "https://rudeigerc.dev"
-tags = ["minimal"]
+
+homepage = "https://github.com/rudeigerc/yggdrasill"
+
+demosite = "https://rudeigerc.dev"
+
+tags = ["minimal", "blog"]
 features = ["blog"]
-min_version = "0.41.0"
 
 [author]
   name = "Yuchen Cheng"

@@ -1,9 +1,14 @@
 aside {
-  width: 20%;
   position: fixed;
-  right: 0;
-  padding-right: 32px;
-  top: 12rem;
+  width: 400px;
+  margin-left: 800px;
+  padding: 16px;
+  top: 200px;
+
+  span {
+    font-weight: bold;
+    color: $color-theme-primary
+  }
 
   ul,
   li {
@@ -17,5 +22,11 @@ aside {
 
     padding-left: .5em;
     list-style: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  aside {
+    display: none;
   }
 }
