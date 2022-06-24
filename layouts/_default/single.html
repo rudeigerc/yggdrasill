@@ -22,6 +22,8 @@
       {{ .TableOfContents }}
     </aside>
   </div>
+  {{ if not .Site.IsServer }}
   {{ partial "giscus.html" . }}
+  {{ end }}
 </section>
 {{ end }}
