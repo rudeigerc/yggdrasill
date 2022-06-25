@@ -1,0 +1,31 @@
+.footnotes {
+  font-size: small;
+}
+
+sup {
+  position: relative;
+
+  .sup-popup {
+    display: block !important;
+    visibility: hidden;
+    font-size: small;
+    width: max-content;
+    max-width: 300px;
+    background-color: rgba($color-text-primary, 0.8);
+    color: white;
+    border-radius: 5px;
+    display: table;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    padding: 10px;
+    margin-left: 0;
+    word-break: break-all;
+  }
+
+  &:hover {
+    .sup-popup {
+      visibility: visible;
+    }
+  }
+}
