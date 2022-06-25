@@ -31,6 +31,9 @@ div#content {
 }
 
 article#content {
+  a {
+    color: $color-theme-secondary;
+  }
 
   li,
   dt {

@@ -35,6 +35,8 @@ aside {
 
   ul,
   li {
+    line-height: 1.5;
+
     a {
       color: $color-text-secondary;
 
@@ -45,6 +47,10 @@ aside {
 
     padding-left: .5em;
     list-style: none;
+  }
+
+  .active {
+    color: $color-text-secondary;
   }
 }
 
