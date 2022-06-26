@@ -7,7 +7,7 @@ const enableTitleAnchor = () => {
       headers.forEach((header) => {
         header.innerHTML = `
           <a href="#${header.id}" class="anchor icon-link" aria-hidden="true">
-            <i class="fa-solid fa-link"></i>
+            <i class="fa-solid fa-hashtag"></i>
           </a>
           ${header.innerHTML}`;
       });

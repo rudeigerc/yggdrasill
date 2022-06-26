@@ -1,7 +1,17 @@
 {{ define "main" }}
 <section id="main">
   <h1 id="title">{{ .Title }}</h1>
-  <div class="single date">{{ .Date.Format "2006-01-02" }}</div>
+  <div class="summary-meta">
+    <span>
+      {{ .Date.Format "2006-01-02" }}
+      {{ range .Params.categories }}
+      •
+      <a href="/categories/{{ . | urlize }}">
+        {{ . }}
+      </a>
+    </span>
+    {{ end }}
+  </div>
   {{ with .Params.tags }}
   <div class="tags">
     {{ range . }}

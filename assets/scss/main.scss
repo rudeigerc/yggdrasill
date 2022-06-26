@@ -3,6 +3,7 @@
 @import "third_party/normalize.scss";
 
 @import "header.scss";
+@import "summary.scss";
 @import "table.scss";
 @import "code.scss";
 @import "pagination.scss";
@@ -12,27 +13,33 @@
 @import "404.scss";
 
 html {
+  font-family: Roboto, "PingFang SC", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
   scroll-behavior: smooth;
+  tab-size: 4;
 }
 
 body {
-  font-family: Roboto, "PingFang SC", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   color: $color-text-primary;
   max-width: 768px;
   margin: 5rem auto;
-  text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
 }
 
 div#content {
-  min-height: calc(100vh - 354px);
+  min-height: calc(100vh - 392px);
 }
 
 article#content {
   a {
-    color: $color-theme-secondary;
+    color: $color-theme-primary;
+
+    &:hover {
+      text-decoration: underline;
+      transition: color 0.5s ease;
+    }
   }
 
   li,
@@ -75,7 +82,7 @@ blockquote {
 }
 
 a {
-  color: $color-theme-primary;
+  color: $color-text-primary;
   text-decoration: none;
 
   &:hover {
@@ -97,11 +104,8 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.meta {
-  height: 120px
-}
-
 .title {
+  color: $color-text-primary;
   font-weight: 300;
   margin: 0;
 }
@@ -126,15 +130,11 @@ hr {
 
 .menu {
   display: flex;
+  margin-bottom: 3rem;
 }
 
 .menu-item {
   margin-right: 1rem;
-}
-
-.post-title {
-  margin-bottom: 0;
-  border-bottom: none;
 }
 
 .draft-tag {
@@ -148,18 +148,6 @@ hr {
 article.post {
   color: $color-text-secondary;
   margin-bottom: 1.5rem;
-}
-
-.summary-meta {
-  display: flex;
-  color: gray;
-  font-size: 10pt;
-  margin-bottom: 1rem;
-  align-items: center;
-}
-
-.date {
-  margin-right: .5rem;
 }
 
 .single.date {

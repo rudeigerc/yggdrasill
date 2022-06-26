@@ -1,5 +1,16 @@
 <article class="post">
   <header>
+    <div class="summary-meta">
+      <span>
+        {{ .Date.Format "2006-01-02" }}
+        {{ range .Params.categories }}
+        •
+        <a href="/categories/{{ . | urlize }}">
+          {{ . }}
+        </a>
+      </span>
+      {{ end }}
+    </div>
     <h2 class="post-title">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       {{ if .Draft }}
@@ -8,25 +19,12 @@
       </strong>
       {{end}}
     </h2>
-    <div class="summary-meta">
-      <div class="date">{{ .Date.Format "2006-01-02" }}</div>
-      {{ range .Params.categories }}
-      <a href="/categories/{{ . | urlize }}">
-        <div class="category">
-          {{ . }}
-        </div>
-      </a>
-      {{ end }}
-    </div>
   </header>
-  {{ if isset .Params "description" }}
-  {{ .Description }}
-  {{ else }}
-  {{ .Summary }}
-  {{ end }}
-  <footer>
-    <a href='{{ .Permalink }}'>
-      <nobr>Read more →</nobr>
-    </a>
-  </footer>
+  <div class="summary">
+    {{ if isset .Params "description" }}
+    {{ .Description }}
+    {{ else }}
+    {{ .Summary }}
+    {{ end }}
+  </div>
 </article>
