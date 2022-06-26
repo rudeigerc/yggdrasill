@@ -9,6 +9,12 @@
 {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
 <script type="text/javascript" src="{{ $js.Permalink }}"></script>
 
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut" href="/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="mask-icon" href="/img/icon.svg">
+<link rel="alternate" type="application/rss+xml" title="{{ .Title }} | {{ .Site.Params.Subtitle }}" href="/index.xml" />
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -120,21 +120,21 @@ hr {
 .social {
   display: flex;
   justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
   margin-bottom: .3rem;
   min-height: 1.5rem;
-}
-
-.social-icon {
-  padding: 0 .25rem
+  gap: 1rem;
 }
 
 .menu {
   display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
   margin-bottom: 3rem;
-}
-
-.menu-item {
-  margin-right: 1rem;
+  gap: 1rem;
 }
 
 .draft-tag {
