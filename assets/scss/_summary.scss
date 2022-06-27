@@ -1,11 +1,12 @@
 .articles {
   display: grid;
-  gap: 2rem;
+  row-gap: 2rem;
 }
 
 .summary-meta {
   color: $color-text-secondary;
   font-size: 10pt;
+  margin-bottom: .5rem;
 }
 
 .summary {
