@@ -23,6 +23,9 @@ article .anchor {
 }
 
 aside {
+  font-size: 14px;
+  font-weight: 500;
+
   position: fixed;
   width: 400px;
   margin-left: 800px;
@@ -30,13 +33,17 @@ aside {
   top: 200px;
 
   span {
-    font-weight: bold;
     color: $color-theme-primary
   }
 
-  ul,
+  ul {
+    margin-block-start: 0;
+    padding-inline-start: 1em;
+  }
+
   li {
     line-height: 1.5;
+    list-style: none;
 
     a {
       color: $color-text-secondary;
@@ -45,9 +52,6 @@ aside {
         color: $color-theme-primary;
       }
     }
-
-    padding-left: .5em;
-    list-style: none;
   }
 
   .active {

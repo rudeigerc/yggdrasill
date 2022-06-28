@@ -71,7 +71,7 @@ figcaption>h4 {
 }
 
 blockquote {
-  color: gray;
+  color: $color-text-secondary;
   border-left: 3px solid $color-theme-primary;
   padding: .25rem 1rem;
   margin-inline-start: 0;
@@ -154,13 +154,13 @@ article.post {
 }
 
 .single.date {
-  color: gray;
+  color: $color-text-secondary;
   font-size: 12px;
 }
 
 // footer
 .footer {
-  color: gray;
+  color: $color-text-secondary;
   font-size: 8pt;
   margin: 1rem 0;
 }
@@ -174,7 +174,7 @@ article.post {
 
 .list-item-date {
   font-size: 10pt;
-  color: rgba($color: black, $alpha: .5);
+  color: $color-text-secondary;
   margin-right: .25rem;
   min-width: 5rem;
   text-align: left;
