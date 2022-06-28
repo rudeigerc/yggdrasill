@@ -1,6 +1,7 @@
 @import "variables.scss";
 
-@import "third_party/normalize.scss";
+@import "libs/chroma/github-dark.scss";
+@import "libs/normalize/modern-normalize.scss";
 
 @import "header.scss";
 @import "summary.scss";

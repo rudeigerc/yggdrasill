@@ -33,7 +33,7 @@ aside {
   top: 200px;
 
   span {
-    color: $color-theme-primary
+    color: $color-text-secondary
   }
 
   ul {
@@ -46,17 +46,20 @@ aside {
     list-style: none;
 
     a {
-      color: $color-text-secondary;
+      color: rgba($color-text-secondary, .6);
 
       &:hover {
+        color: lighten($color-theme-primary, 10%);
+      }
+
+      &.active {
         color: $color-theme-primary;
+        transition: color 0.5s ease;
       }
     }
   }
 
-  .active {
-    color: $color-text-secondary;
-  }
+
 }
 
 @media (max-width: 1024px) {

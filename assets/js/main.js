@@ -37,8 +37,19 @@ const enablePopup = () => {
   });
 };
 
+// enableScrollSpy enables Bootstrap Scrollspy for the table of contents.
+const enableScrollSpy = () => {
+  if ($('article').data('bs-spy')) {
+    $('#TableOfContents').addClass('nav flex-column');
+    $('#TableOfContents li').addClass('nav-item');
+    $('#TableOfContents li a').addClass('nav-link');
+    $('body').scrollspy('refresh');
+  }
+}
+
 $(document).ready(function () {
   enableTitleAnchor();
   enableBackref();
   enablePopup();
+  enableScrollSpy();
 });
