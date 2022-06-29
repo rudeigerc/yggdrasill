@@ -39,17 +39,37 @@ const enablePopup = () => {
 
 // enableScrollSpy enables Bootstrap Scrollspy for the table of contents.
 const enableScrollSpy = () => {
-  if ($('article').data('bs-spy')) {
-    $('#TableOfContents').addClass('nav flex-column');
-    $('#TableOfContents li').addClass('nav-item');
-    $('#TableOfContents li a').addClass('nav-link');
-    $('body').scrollspy('refresh');
+  if ($("article").data("bs-spy")) {
+    $("#TableOfContents").addClass("nav flex-column");
+    $("#TableOfContents li").addClass("nav-item");
+    $("#TableOfContents li a").addClass("nav-link");
+    $("body").scrollspy("refresh");
   }
-}
+};
+
+const enableScrollToTop = () => {
+  const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+  scrollToTopButton.addEventListener("click", () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+
+  const threshold = 100;
+  document.addEventListener("scroll", () => {
+    scrollToTopButton.style.visibility =
+      window.scrollY > threshold ? "visible" : "hidden";
+    scrollToTopButton.style.opacity = window.scrollY > threshold ? 1 : 0;
+  });
+};
 
 $(document).ready(function () {
   enableTitleAnchor();
   enableBackref();
   enablePopup();
   enableScrollSpy();
+  enableScrollToTop();
 });

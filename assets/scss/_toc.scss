@@ -33,16 +33,17 @@ aside {
   top: 200px;
 
   span {
-    color: $color-text-secondary
+    font-weight: bold;
+    color: $color-text-secondary;
   }
 
   ul {
-    margin-block-start: 0;
+    margin-block-start: .5rem;
     padding-inline-start: 1em;
   }
 
   li {
-    line-height: 1.5;
+    line-height: 2;
     list-style: none;
 
     a {

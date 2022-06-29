@@ -15,7 +15,6 @@
 @import "404.scss";
 
 html {
-  font-family: Roboto, "PingFang SC", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -25,6 +24,17 @@ html {
 }
 
 body {
+  font-family:
+    'Noto Sans',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
   color: $color-text-primary;
   max-width: 768px;
   margin: 5rem auto;
@@ -47,7 +57,7 @@ article#content {
 
   li,
   dt {
-    margin: 12px 0;
+    margin: .5rem 0;
     padding: 0;
   }
 }
@@ -185,6 +195,35 @@ section.footnotes p {
   margin: 0 auto;
 }
 
+.scroll-to-top {
+  background-color: $color-theme-primary;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  z-index: 500;
+  box-shadow: 0px 4px 16px rgba($color: black, $alpha: .3);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms;
+
+  .fa-angle-up {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover {
+    background-color: lighten($color-theme-primary, 10%);
+  }
+}
+
 @media (max-width: 768px) {
   body {
     margin: 2rem;
@@ -201,5 +240,10 @@ section.footnotes p {
 
   li {
     margin: 0;
+  }
+
+  .scroll-to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 }
