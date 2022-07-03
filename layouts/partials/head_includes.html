@@ -1,5 +1,6 @@
 {{ $scss := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $scss.Permalink }}">
+<link rel="preload" href="{{ $scss.RelPermalink }}" as="style">
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.integrity }}">
 
 {{ partial "jquery.html" . }}
 
@@ -10,7 +11,7 @@
 <link rel="shortcut" href="/img/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="mask-icon" href="/img/icon.svg">
-<link rel="alternate" type="application/rss+xml" title="{{ .Title }} | {{ .Site.Params.Subtitle }}" href="/index.xml" />
+<link rel="alternate" type="application/rss+xml" title="{{ .Title }}" href="/index.xml" />
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

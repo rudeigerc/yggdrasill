@@ -1,6 +1,7 @@
 .articles {
   display: grid;
   row-gap: 2rem;
+  overflow-wrap: anywhere;
 }
 
 .summary-meta {
