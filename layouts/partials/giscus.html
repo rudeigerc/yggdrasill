@@ -3,12 +3,14 @@
   data-repo-id="{{ .Site.Params.giscus.dataRepoID }}"
   data-category="{{ .Site.Params.giscus.dataCategory }}"
   data-category-id="{{ .Site.Params.giscus.dataCategoryID }}"
-  data-mapping="og:title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="light"
-  data-lang="zh-CN"
+  data-mapping="{{ .Site.Params.giscus.dataMapping | default "og:title" }}"
+  {{ if or (eq .Site.Params.giscus.dataMapping "number") (eq .Site.Params.giscus.dataMapping "specific") }}data-term="{{ .Site.Params.giscus.dataTerm }}"{{ end }}
+  data-reactions-enabled="{{ .Site.Params.giscus.dataReactionsEnabled | default 1 }}"
+  data-emit-metadata="{{ .Site.Params.giscus.dataEmitMetadata | default 0 }}"
+  data-input-position="{{ .Site.Params.giscus.dataInputPosition | default "top" }}"
+  data-theme="{{ .Site.Params.giscus.dataTheme | default "light" }}"
+  data-lang="{{ .Site.Params.giscus.dataLang | default "en" }}"
+  {{ if eq .Site.Params.giscus.dataLoading "lazy" }}data-loading="lazy"{{ end }}
   crossorigin="anonymous"
   async>
 </script>

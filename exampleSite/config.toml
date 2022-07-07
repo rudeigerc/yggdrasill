@@ -29,10 +29,10 @@ theme = "github.com/rudeigerc/yggdrasill"
   url = "/categories"
   weight = 3
 
-[[menu.main]]
-  name = "Series"
-  url = "/series"
-  weight = 4
+# [[menu.main]]
+#   name = "Series"
+#   url = "/series"
+#   weight = 4
 
 [[menu.main]]
   name = "Tags"
@@ -77,7 +77,14 @@ series = "series"
     disableInlineCSS = true
 
 [params]
-subtitle = "yggdrasill.rudeigerc.dev"
+  subtitle = "A minimal theme for Hugo"
+  description = "A minimal theme for Hugo"
+
+  [params.giscus]
+    dataRepo = "rudeigerc/yggdrasill"
+    dataRepoID = "MDEwOlJlcG9zaXRvcnkyODQyNzI2NTE="
+    dataCategory = "Comments"
+    dataCategoryID = "DIC_kwDOEPGoC84CQFk4"
 
 # custom social icons
 # Reference: https://fontawesome.com/icons

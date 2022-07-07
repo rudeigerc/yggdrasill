@@ -3,11 +3,7 @@
 
   <base href="{{ .Permalink }}">
   <title>
-    {{ if .IsHome }}
-    {{ .Title }}
-    {{ else }}
-    {{ .Title }} | {{ .Site.Title }}
-    {{ end }}
+    {{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}{{ end}}
   </title>
 
   {{ partial "head_includes.html" . }}
