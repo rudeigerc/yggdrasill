@@ -23,6 +23,7 @@ article .anchor {
 }
 
 aside {
+  color: $color-text-secondary;
   font-size: 14px;
   font-weight: 500;
 
@@ -34,7 +35,6 @@ aside {
 
   span {
     font-weight: bold;
-    color: $color-text-secondary;
   }
 
   ul {
@@ -47,10 +47,10 @@ aside {
     list-style: none;
 
     a {
-      color: rgba($color-text-secondary, .6);
+      color: $color-text-primary-60;
 
       &:hover {
-        color: lighten($color-theme-primary, 10%);
+        color: $color-theme-primary-80;
       }
 
       &.active {
@@ -59,8 +59,6 @@ aside {
       }
     }
   }
-
-
 }
 
 @media (max-width: 1024px) {

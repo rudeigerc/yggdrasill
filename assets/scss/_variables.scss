@@ -1,4 +1,52 @@
-$color-theme-primary: #2E5C6E !default;
-$color-theme-secondary: #B54434 !default;
-$color-text-primary: #1A2027 !default;
-$color-text-secondary: #6B7280 !default;
+$color-background: var(--color-background) !default;
+$color-background-sup: var(--color-background-sup) !default;
+$color-theme-primary: var(--color-theme-primary) !default;
+$color-theme-primary-20: var(--color-theme-primary-20) !default;
+$color-theme-primary-40: var(--color-theme-primary-40) !default;
+$color-theme-primary-60: var(--color-theme-primary-60) !default;
+$color-theme-primary-80: var(--color-theme-primary-80) !default;
+$color-theme-secondary: var(--color-theme-secondary) !default;
+$color-text-primary: var(--color-text-primary) !default;
+$color-text-primary-20: var(--color-text-primary-20) !default;
+$color-text-primary-40: var(--color-text-primary-40) !default;
+$color-text-primary-60: var(--color-text-primary-60) !default;
+$color-text-primary-80: var(--color-text-primary-80) !default;
+$color-text-secondary: var(--color-text-secondary) !default;
+$color-border-header: var(--color-border-header) !default;
+
+:root {
+  --color-background: #FFFFFF;
+  --color-background-sup: #1A2027;
+  --color-theme-primary: #2E5C6E;
+  --color-theme-primary-20: #2E5C6E33;
+  --color-theme-primary-40: #2E5C6E66;
+  --color-theme-primary-60: #2E5C6E99;
+  --color-theme-primary-80: #2E5C6ECC;
+  --color-theme-secondary: #B54434;
+  --color-text-primary: #1A2027;
+  --color-text-primary-20: #1A202733;
+  --color-text-primary-40: #1A202766;
+  --color-text-primary-60: #1A202799;
+  --color-text-primary-80: #1A2027CC;
+  --color-text-secondary: #6B7280;
+  --color-border-header: #0000001A;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-background: #2F3437;
+  --color-background-sup: #1A2027;
+  --color-theme-primary: #9AB4BE;
+  --color-theme-primary-20: #9AB4BE33;
+  --color-theme-primary-40: #9AB4BE66;
+  --color-theme-primary-60: #9AB4BE99;
+  --color-theme-primary-80: #9AB4BECC;
+  --color-theme-secondary: #B54434;
+  --color-text-primary: #F8F8F8;
+  --color-text-primary-20: #F8F8F833;
+  --color-text-primary-40: #F8F8F866;
+  --color-text-primary-60: #F8F8F899;
+  --color-text-primary-80: #F8F8F8CC;
+  --color-text-secondary: #BBBBBB;
+  --color-border-header: #FFFFFF1A;
+}

@@ -1,4 +1,6 @@
-<script src="https://giscus.app/client.js"
+<script
+  id="giscus"
+  src="https://giscus.app/client.js"
   data-repo="{{ .Site.Params.giscus.dataRepo }}"
   data-repo-id="{{ .Site.Params.giscus.dataRepoID }}"
   data-category="{{ .Site.Params.giscus.dataCategory }}"
@@ -13,4 +15,11 @@
   {{ if eq .Site.Params.giscus.dataLoading "lazy" }}data-loading="lazy"{{ end }}
   crossorigin="anonymous"
   async>
+</script>
+
+<script>
+  const element = document.getElementById('giscus');
+  if (element) {
+    element.setAttribute('data-theme', initialColorScheme)
+  }
 </script>

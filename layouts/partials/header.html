@@ -4,11 +4,17 @@
   <ul class="social">
     {{ range .Site.Params.social }}
     <li>
-    <a href="{{ .url }}" title="{{ .name }}">
-      <i class="fa-{{ .type }} fa-{{ .icon }}"></i>
-    </a>
-  </li>
+      <a href="{{ .url }}" title="{{ .name }}">
+        <i class="fa-{{ .type }} fa-{{ .icon }}"></i>
+      </a>
+    </li>
     {{ end }}
+    |
+    <li>
+      <a class="toggle-color-scheme" title="Toggle Color Scheme">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </a>
+    </li>
   </ul>
   <nav>
     <ul class="menu">

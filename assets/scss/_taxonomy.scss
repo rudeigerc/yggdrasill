@@ -9,8 +9,8 @@
   user-select: none;
 
   &:hover {
-    color: rgba($color: $color-theme-primary, $alpha: .1);
-    border-color: rgba($color: $color-theme-primary, $alpha: .8);
+    color: $color-theme-primary-20;
+    border-color: $color-theme-primary-80;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   }
 }
@@ -33,8 +33,8 @@
   user-select: none;
 
   &:hover {
-    color: rgba($color: $color-theme-primary, $alpha: .8);
-    border-color: rgba($color: $color-theme-primary, $alpha: .8);
+    color: $color-theme-primary-80;
+    border-color: $color-theme-primary-80;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   }
 }
@@ -50,7 +50,7 @@
   line-height: 1rem;
   color: $color-theme-primary;
   border-radius: .5rem;
-  background-color: rgba($color: $color-theme-primary, $alpha: .3);
+  background-color: $color-theme-primary-40;
   text-align: center;
   margin-left: .25rem;
   margin-right: -.25rem;

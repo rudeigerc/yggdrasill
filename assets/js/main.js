@@ -66,7 +66,36 @@ const enableScrollToTop = () => {
   });
 };
 
+const enableToggleColorScheme = () => {
+  const sendMessage = (message) => {
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+
+  document.querySelector(".fa-circle-half-stroke").addEventListener("click", () => {
+    if (localStorage.getItem(colorSchemeKey) === colorSchemeLight) {
+      localStorage.setItem(colorSchemeKey, colorSchemeDark);
+      document.documentElement.classList.add(colorSchemeDark)
+      sendMessage({
+        setConfig: {
+          theme: colorSchemeDark,
+        }
+      });
+    } else {
+      document.documentElement.classList.remove(colorSchemeDark)
+      localStorage.setItem(colorSchemeKey, colorSchemeLight);
+      sendMessage({
+        setConfig: {
+          theme: colorSchemeLight,
+        }
+      });
+    }
+  });
+}
+
 $(document).ready(function () {
+  enableToggleColorScheme();
   enableTitleAnchor();
   enableBackref();
   enablePopup();

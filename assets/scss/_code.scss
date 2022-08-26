@@ -1,33 +1,34 @@
 pre {
-    border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    overflow: auto;
-    & > code {
-        font-weight: 500;
-        font-size: 12px;
-    }
+  border: 1px solid $color-background;
+  border-radius: 6px;
+  overflow: auto;
+
+  &>code {
+    font-weight: 500;
+    font-size: 12px;
+  }
 }
 
-:not(td) > pre {
-    padding: 1rem;
+:not(td)>pre {
+  padding: 1rem;
 }
 
 code {
-    font-family: "Fira Code", monospace;
+  font-family: "Fira Code", monospace;
 }
 
 div.highlight table {
-    border: 1px solid #EAEAEA;
-    padding: 0 1rem;
+  border: 1px solid $color-background;
+  padding: 0 1rem;
 }
 
-:not(pre) > code {
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: rgba($color-text-primary, .8);
-    background-color: rgba($color-theme-primary, .1);
-    margin: 0 2px;
-    padding: 0 5px;
-    border-radius: 5px;
-    word-break: break-word;
+:not(pre)>code {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: $color-text-primary-80;
+  background-color: $color-theme-primary-20;
+  margin: 0 2px;
+  padding: 0 5px;
+  border-radius: 5px;
+  word-break: break-word;
 }

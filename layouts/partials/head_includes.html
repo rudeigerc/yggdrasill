@@ -1,11 +1,28 @@
 {{ $scss := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-<link rel="preload" href="{{ $scss.RelPermalink }}" as="style">
-<link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.integrity }}">
+<link rel="preload" href="{{ $scss.RelPermalink }}" as="style" integrity="{{ $scss.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.Integrity }}">
+
+<script type="text/javascript">
+  const colorSchemeKey = "theme"
+  const colorSchemeLight = "light"
+  const colorSchemeDark = "dark"
+
+  let prefersColorScheme = colorSchemeLight;
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    prefersColorScheme = colorSchemeDark;
+  }
+
+  const initialColorScheme = localStorage.getItem(colorSchemeKey) || prefersColorScheme;
+
+  if (initialColorScheme === colorSchemeDark) {
+    document.documentElement.classList.toggle(colorSchemeDark, true)
+  }
+</script>
 
 {{ partial "jquery.html" . }}
 
 {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
-<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut" href="/img/favicon.ico" type="image/x-icon">

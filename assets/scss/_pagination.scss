@@ -28,17 +28,17 @@ li.page-item {
 
   &:hover {
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-    background-color: rgba($color-theme-primary, 0.2);
+    background-color: $color-theme-primary-20;
   }
 
   &.active {
-    background-color: rgba($color-theme-primary, 0.2);
-    border: 1px solid rgba($color-theme-primary, 0.2);
+    background-color: $color-theme-primary-20;
+    border: 1px solid $color-theme-primary-20;
   }
 
   &.disabled {
     span {
-      color: rgba(0, 0, 0, .5);
+      color: $color-text-secondary;
     }
 
     pointer-events: none;

@@ -1,4 +1,6 @@
 @import "variables.scss";
+@import "functions.scss";
+@import "mixins.scss";
 
 @import "libs/chroma/github-dark.scss";
 @import "libs/normalize/modern-normalize.scss";
@@ -36,6 +38,7 @@ body {
     'Apple Color Emoji',
     'Segoe UI Emoji';
   color: $color-text-primary;
+  background-color: $color-background;
   max-width: 768px;
   margin: 5rem auto;
 }
@@ -99,7 +102,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: rgba($color: $color-theme-primary, $alpha: .8);
+    color: $color-theme-primary-80;
     transition: color 0.5s ease;
   }
 }
@@ -124,8 +127,8 @@ hr {
 }
 
 .subtitle {
+  color: $color-text-secondary;
   font-weight: 300;
-  color: rgba(0, 0, 0, .5);
   margin: 0;
   border-bottom: none;
 }
@@ -138,7 +141,13 @@ hr {
   margin-top: 0;
   margin-bottom: .3rem;
   min-height: 1.5rem;
-  column-gap: .5rem;
+  column-gap: 1rem;
+
+  li {
+    a {
+      cursor: pointer;
+    }
+  }
 }
 
 .menu {
@@ -220,7 +229,8 @@ section.footnotes p {
   }
 
   &:hover {
-    background-color: lighten($color-theme-primary, 10%);
+    transition: background-color 0.25s ease-in-out;
+    background-color: $color-theme-primary-60;
   }
 }
 
