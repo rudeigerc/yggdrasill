@@ -1,23 +1,16 @@
+<script type="text/javascript">
+  (function() {
+    const prefersColorScheme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    const initialColorScheme = localStorage.getItem("theme") || prefersColorScheme;
+    if (initialColorScheme === "dark") {
+      document.documentElement.classList.toggle("dark", true)
+    }
+  })()
+</script>
+
 {{ $scss := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 <link rel="preload" href="{{ $scss.RelPermalink }}" as="style" integrity="{{ $scss.Data.Integrity }}">
 <link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.Integrity }}">
-
-<script type="text/javascript">
-  const colorSchemeKey = "theme"
-  const colorSchemeLight = "light"
-  const colorSchemeDark = "dark"
-
-  let prefersColorScheme = colorSchemeLight;
-  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    prefersColorScheme = colorSchemeDark;
-  }
-
-  const initialColorScheme = localStorage.getItem(colorSchemeKey) || prefersColorScheme;
-
-  if (initialColorScheme === colorSchemeDark) {
-    document.documentElement.classList.toggle(colorSchemeDark, true)
-  }
-</script>
 
 {{ partial "jquery.html" . }}
 

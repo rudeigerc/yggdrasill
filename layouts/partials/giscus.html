@@ -20,6 +20,8 @@
 <script>
   const element = document.getElementById('giscus');
   if (element) {
+    const prefersColorScheme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    const initialColorScheme = localStorage.getItem("theme") || prefersColorScheme;
     element.setAttribute('data-theme', initialColorScheme)
   }
 </script>

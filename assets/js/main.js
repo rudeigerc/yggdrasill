@@ -66,14 +66,18 @@ const enableScrollToTop = () => {
   });
 };
 
-const enableToggleColorScheme = () => {
-  const sendMessage = (message) => {
-    const iframe = document.querySelector("iframe.giscus-frame");
-    if (!iframe) return;
-    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
+const sendMessage = (message) => {
+  const iframe = document.querySelector("iframe.giscus-frame");
+  if (!iframe) return;
+  iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
 
-  document.querySelector(".fa-circle-half-stroke").addEventListener("click", () => {
+const enableToggleColorScheme = () => {
+  const colorSchemeKey = "theme"
+  const colorSchemeLight = "light"
+  const colorSchemeDark = "dark"
+
+  document.querySelector(".toggle-color-scheme").addEventListener("click", () => {
     if (localStorage.getItem(colorSchemeKey) === colorSchemeLight) {
       localStorage.setItem(colorSchemeKey, colorSchemeDark);
       document.documentElement.classList.add(colorSchemeDark)
@@ -95,10 +99,10 @@ const enableToggleColorScheme = () => {
 }
 
 $(document).ready(function () {
-  enableToggleColorScheme();
   enableTitleAnchor();
   enableBackref();
   enablePopup();
   enableScrollSpy();
   enableScrollToTop();
+  enableToggleColorScheme();
 });
