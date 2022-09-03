@@ -29,7 +29,7 @@ theme = "yggdrasill"
 ### With Hugo Modules
 
 ```shell
-# Initialize the hugo module system
+# Initialize the Hugo module system
 $ hugo mod init github.com/<your_user>/<your_project>
 ```
 
@@ -44,8 +44,16 @@ theme = "github.com/rudeigerc/yggdrasill"
   path = "github.com/rudeigerc/yggdrasill"
 ```
 
-Please refer to the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/) for more information.
+Please refer to the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/) for more information about installation with Hugo modules.
+
+## Development
+
+Yggdrasill uses [pnpm](https://pnpm.io/) as the package manager for development, mostly for linting and formatting.
+
+```shell
+$ pnpm install
+```
 
 ## License
 
-MIT
+Yggdrasill is licensed under the MIT License.
