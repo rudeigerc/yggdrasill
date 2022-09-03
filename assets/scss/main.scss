@@ -1,42 +1,32 @@
-@import "variables.scss";
-@import "functions.scss";
-@import "mixins.scss";
+@import 'variables';
+@import 'functions';
+@import 'mixins';
 
-@import "libs/chroma/github-dark.scss";
-@import "libs/normalize/modern-normalize.scss";
+@import 'libs/chroma/github-dark';
+@import 'libs/normalize/modern-normalize';
 
-@import "header.scss";
-@import "summary.scss";
-@import "table.scss";
-@import "taxonomy.scss";
-@import "code.scss";
-@import "pagination.scss";
-@import "toc.scss";
-@import "footnotes.scss";
+@import 'header';
+@import 'summary';
+@import 'table';
+@import 'taxonomy';
+@import 'code';
+@import 'pagination';
+@import 'toc';
+@import 'footnotes';
 
-@import "404.scss";
+@import '404';
 
 html {
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   scroll-behavior: smooth;
   tab-size: 4;
 }
 
 body {
-  font-family:
-    'Noto Sans',
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji';
+  font-family: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   color: $color-text-primary;
   background-color: $color-background;
   max-width: 768px;
@@ -45,24 +35,6 @@ body {
 
 div#content {
   min-height: calc(100vh - 392px);
-}
-
-article#content {
-  a {
-    color: $color-theme-primary;
-    font-weight: 500;
-
-    &:hover {
-      text-decoration: underline;
-      transition: color 0.5s ease;
-    }
-  }
-
-  li,
-  dt {
-    margin: .5rem 0;
-    padding: 0;
-  }
 }
 
 p {
@@ -79,7 +51,7 @@ figcaption {
   text-align: center;
 }
 
-figcaption>h4 {
+figcaption > h4 {
   font-size: 14px;
   color: $color-text-secondary;
 }
@@ -87,7 +59,7 @@ figcaption>h4 {
 blockquote {
   color: $color-text-secondary;
   border-left: 3px solid $color-theme-primary;
-  padding: .25rem 1rem;
+  padding: 0.25rem 1rem;
   margin-inline-start: 0;
   margin-inline-end: 0;
 
@@ -113,7 +85,42 @@ dt {
 
 hr {
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 1px solid rgba(#000, 0.1);
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  min-height: 1.5rem;
+  column-gap: 1rem;
+
+  li {
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+article#content {
+  a {
+    color: $color-theme-primary;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+      transition: color 0.5s ease;
+    }
+  }
+
+  li,
+  dt {
+    margin: 0.5rem 0;
+    padding: 0;
+  }
 }
 
 .title {
@@ -127,23 +134,6 @@ hr {
   font-weight: 300;
   margin: 0;
   border-bottom: none;
-}
-
-.social {
-  display: flex;
-  justify-content: flex-end;
-  list-style-type: none;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: .3rem;
-  min-height: 1.5rem;
-  column-gap: 1rem;
-
-  li {
-    a {
-      cursor: pointer;
-    }
-  }
 }
 
 .menu {
@@ -161,7 +151,7 @@ hr {
   color: white;
   background-color: $color-theme-primary;
   border: 1px solid $color-theme-primary;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 article.post {
@@ -185,13 +175,13 @@ article.post {
 .list-item {
   display: flex;
   align-items: center;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .list-item-date {
   font-size: 10pt;
   color: $color-text-secondary;
-  margin-right: .25rem;
+  margin-right: 0.25rem;
   min-width: 5rem;
   text-align: left;
 }
@@ -214,7 +204,7 @@ section.footnotes p {
   height: 2.5rem;
   border-radius: 50%;
   z-index: 500;
-  box-shadow: 0px 4px 16px rgba($color: black, $alpha: .3);
+  box-shadow: 0 4px 16px rgba(#000, 0.3);
   visibility: hidden;
   opacity: 0;
   transition: opacity 250ms;
@@ -240,8 +230,8 @@ section.footnotes p {
   }
 
   img {
-    max-width: -webkit-fill-available;
-    max-height: -webkit-fill-available;
+    max-width: fill-available;
+    max-height: fill-available;
   }
 
   li {

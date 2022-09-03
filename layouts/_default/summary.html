@@ -4,27 +4,25 @@
       <span>
         {{ .Date.Format "2006-01-02" }}
         {{ range .Params.categories }}
-        •
-        <a href="/categories/{{ . | urlize }}">
-          {{ . }}
-        </a>
+          •
+          <a href="/categories/{{ . | urlize }}">
+            {{ . }}
+          </a>
+        {{ end }}
       </span>
-      {{ end }}
     </div>
     <h2 class="post-title">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       {{ if .Draft }}
-      <strong class="draft-tag">
-        DRAFT
-      </strong>
-      {{end}}
+        <strong class="draft-tag"> DRAFT </strong>
+      {{ end }}
     </h2>
   </header>
   <div class="summary">
     {{ if isset .Params "description" }}
-    {{ .Description }}
+      {{ .Description }}
     {{ else }}
-    {{ .Summary }}
+      {{ .Summary }}
     {{ end }}
   </div>
 </article>

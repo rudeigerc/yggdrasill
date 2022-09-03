@@ -1,12 +1,12 @@
 <footer>
   <div>
     <p class="footer">
-      {{ with .Site.Copyright }} {{ . }} {{ end }}<br>
-      Theme <a href="https://github.com/rudeigerc/yggdrasill">Yggdrasill</a> | Powered by <a
-        href="https://gohugo.io">Hugo</a>
+      {{ with .Site.Copyright }}{{ . }}{{ end }}<br />
+      Theme <a href="https://github.com/rudeigerc/yggdrasill">Yggdrasill</a> |
+      Powered by <a href="https://gohugo.io">Hugo</a>
     </p>
   </div>
 </footer>
 {{ if not .Site.IsServer }}
-{{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 {{ end }}

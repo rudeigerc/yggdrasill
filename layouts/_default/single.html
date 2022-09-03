@@ -1,39 +1,42 @@
 {{ define "main" }}
-<section id="main">
-  <h1 id="title">{{ .Title }}</h1>
-  <div class="summary-meta">
-    <span>
-      {{ .Date.Format "2006-01-02" }}
-      {{ range .Params.categories }}
-      •
-      <a href="/categories/{{ . | urlize }}">
-        {{ . }}
-      </a>
-    </span>
-    {{ end }}
-  </div>
-  {{ with .Params.tags }}
-  <div class="tags">
-    {{ range . }}
-    <a href="/tags/{{ . | urlize }}">
-      <div class="tag">
-        #{{ . }}
+  <section id="main">
+    <h1 id="title">{{ .Title }}</h1>
+    <div class="summary-meta">
+      <span>
+        {{ .Date.Format "2006-01-02" }}
+        {{ range .Params.categories }}
+          •
+          <a href="/categories/{{ . | urlize }}">
+            {{ . }}
+          </a>
+        {{ end }}
+      </span>
+    </div>
+    {{ with .Params.tags }}
+      <div class="tags">
+        {{ range . }}
+          <a href="/tags/{{ . | urlize }}">
+            <div class="tag">
+              #{{ . }}
+            </div>
+          </a>
+        {{ end }}
       </div>
-    </a>
     {{ end }}
-  </div>
-  {{ end }}
-  <div class="container">
-    <article id="content" data-bs-spy="scroll" data-bs-target="#TableOfContents">
-      {{ .Content }}
-    </article>
-    <aside>
-      <span>Contents</span>
-      {{ .TableOfContents }}
-    </aside>
-  </div>
-  {{ if not .Site.IsServer }}
-  {{ partial "giscus.html" . }}
-  {{ end }}
-</section>
+    <div class="container">
+      <article
+        id="content"
+        data-bs-spy="scroll"
+        data-bs-target="#TableOfContents">
+        {{ .Content }}
+      </article>
+      <aside>
+        <span>Contents</span>
+        {{ .TableOfContents }}
+      </aside>
+    </div>
+    {{ if not .Site.IsServer }}
+      {{ partial "giscus.html" . }}
+    {{ end }}
+  </section>
 {{ end }}

@@ -1,0 +1,5 @@
+node_modules
+pnpm-lock.yaml
+
+assets/scss/libs/**/*.scss
+exampleSite

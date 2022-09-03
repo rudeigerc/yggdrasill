@@ -1,6 +1,7 @@
 .footnotes {
   color: $color-text-secondary;
   font-size: small;
+  word-break: break-word;
 }
 
 sup {
@@ -15,12 +16,11 @@ sup {
     max-width: 300px;
     background-color: $color-background-sup;
     color: white;
-    border-radius: .5rem;
-    display: table;
+    border-radius: 0.5rem;
     position: absolute;
     top: 1.5rem;
     left: 0;
-    padding: .5rem;
+    padding: 0.5rem;
     margin-left: 0;
     word-break: break-all;
     z-index: 100;

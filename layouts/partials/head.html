@@ -1,9 +1,14 @@
 <head>
   {{ partial "meta.html" . }}
 
-  <base href="{{ .Permalink }}">
+
+  <base href="{{ .Permalink }}" />
   <title>
-    {{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}{{ end}}
+    {{ if eq .Title .Site.Title }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ with .Title }}{{ . }} |{{ end }}{{ .Site.Title }}
+    {{ end }}
   </title>
 
   {{ partial "head_includes.html" . }}

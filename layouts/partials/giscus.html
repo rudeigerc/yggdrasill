@@ -6,7 +6,9 @@
   data-category="{{ .Site.Params.giscus.dataCategory }}"
   data-category-id="{{ .Site.Params.giscus.dataCategoryID }}"
   data-mapping="{{ .Site.Params.giscus.dataMapping | default "og:title" }}"
-  {{ if or (eq .Site.Params.giscus.dataMapping "number") (eq .Site.Params.giscus.dataMapping "specific") }}data-term="{{ .Site.Params.giscus.dataTerm }}"{{ end }}
+  {{ if or (eq .Site.Params.giscus.dataMapping "number") (eq .Site.Params.giscus.dataMapping "specific") }}
+    data-term="{{ .Site.Params.giscus.dataTerm }}"
+  {{ end }}
   data-reactions-enabled="{{ .Site.Params.giscus.dataReactionsEnabled | default 1 }}"
   data-emit-metadata="{{ .Site.Params.giscus.dataEmitMetadata | default 0 }}"
   data-input-position="{{ .Site.Params.giscus.dataInputPosition | default "top" }}"
@@ -14,14 +16,18 @@
   data-lang="{{ .Site.Params.giscus.dataLang | default "en" }}"
   {{ if eq .Site.Params.giscus.dataLoading "lazy" }}data-loading="lazy"{{ end }}
   crossorigin="anonymous"
-  async>
-</script>
+  async></script>
 
 <script>
-  const element = document.getElementById('giscus');
+  const element = document.getElementById('giscus')
   if (element) {
-    const prefersColorScheme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
-    const initialColorScheme = localStorage.getItem("theme") || prefersColorScheme;
+    const prefersColorScheme =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+    const initialColorScheme =
+      localStorage.getItem('theme') || prefersColorScheme
     element.setAttribute('data-theme', initialColorScheme)
   }
 </script>

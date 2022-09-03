@@ -1,44 +1,63 @@
 <script type="text/javascript" data-cfasync="false">
-  (function() {
-    const prefersColorScheme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
-    const initialColorScheme = localStorage.getItem("theme") || prefersColorScheme;
-    if (initialColorScheme === "dark") {
-      document.documentElement.classList.toggle("dark", true)
+  ;(function () {
+    const prefersColorScheme =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+    const initialColorScheme =
+      localStorage.getItem('theme') || prefersColorScheme
+    if (initialColorScheme === 'dark') {
+      document.documentElement.classList.toggle('dark', true)
     }
   })()
 </script>
 
 {{ $scss := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-<link rel="preload" href="{{ $scss.RelPermalink }}" as="style" integrity="{{ $scss.Data.Integrity }}">
-<link rel="stylesheet" href="{{ $scss.RelPermalink }}" integrity="{{ $scss.Data.Integrity }}">
+<link
+  rel="preload"
+  href="{{ $scss.RelPermalink }}"
+  as="style"
+  integrity="{{ $scss.Data.Integrity }}" />
+<link
+  rel="stylesheet"
+  href="{{ $scss.RelPermalink }}"
+  integrity="{{ $scss.Data.Integrity }}" />
 
 {{ partial "jquery.html" . }}
 
 {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
-<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<script
+  type="text/javascript"
+  src="{{ $js.Permalink }}"
+  integrity="{{ $js.Data.Integrity }}"></script>
 
-<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-<link rel="shortcut" href="/img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="mask-icon" href="/img/icon.svg">
-<link rel="alternate" type="application/rss+xml" title="{{ .Title }}" href="/index.xml" />
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+<link rel="mask-icon" href="/img/icon.svg" />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="{{ .Title }}"
+  href="/index.xml" />
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
   href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans:wght@300;400;500;700&display=swap"
-  rel="stylesheet">
+  rel="stylesheet" />
 
 {{ partial "font_awesome.html" . }}
 {{ partial "bootstrap.html" . }}
 
 {{ if .Params.mermaid }}
-{{ partial "mermaid.html" . }}
+  {{ partial "mermaid.html" . }}
 {{ end }}
 
 {{ if .Params.katex }}
-{{ partial "katex.html" . }}
+  {{ partial "katex.html" . }}
 {{ end }}
 
 {{ partial "structured_data/article.html" . }}

@@ -1,13 +1,13 @@
 <div class="meta">
-  <h1 class="title">{{.Site.Title}}</h1>
-  <h2 class="subtitle">{{.Site.Params.Subtitle}}</h2>
+  <h1 class="title">{{ .Site.Title }}</h1>
+  <h2 class="subtitle">{{ .Site.Params.Subtitle }}</h2>
   <ul class="social">
     {{ range .Site.Params.social }}
-    <li>
-      <a href="{{ .url }}" title="{{ .name }}">
-        <i class="fa-{{ .type }} fa-{{ .icon }}"></i>
-      </a>
-    </li>
+      <li>
+        <a href="{{ .url }}" title="{{ .name }}">
+          <i class="fa-{{ .type }} fa-{{ .icon }}"></i>
+        </a>
+      </li>
     {{ end }}
     <li>
       <i class="fa-solid fa-grip-lines-vertical"></i>
@@ -21,9 +21,9 @@
   <nav>
     <ul class="menu">
       {{ range .Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
       {{ end }}
     </ul>
   </nav>

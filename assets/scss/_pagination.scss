@@ -2,10 +2,8 @@ ul.pagination {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: -webkit-box;
-  -webkit-flex-wrap: wrap;
+  display: box;
   flex-wrap: wrap;
-  -webkit-align-items: center;
   align-items: center;
   -webkit-box-align: center;
 }
@@ -17,17 +15,18 @@ li.page-item {
   -webkit-box-pack: center;
   justify-content: center;
   position: relative;
-  margin: 0px 3px;
+  margin: 0 3px;
   min-width: 32px;
   height: 32px;
   border-radius: 4px;
 
   .page-link {
-    padding: 0px 6px;
+    padding: 0 6px;
   }
 
   &:hover {
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+      border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     background-color: $color-theme-primary-20;
   }
 

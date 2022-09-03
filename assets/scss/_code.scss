@@ -1,20 +1,20 @@
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 pre {
   border: 1px solid $color-background;
   border-radius: 6px;
   overflow: auto;
 
-  &>code {
+  & > code {
     font-weight: 500;
     font-size: 12px;
   }
 }
 
-:not(td)>pre {
+:not(td) > pre {
   padding: 1rem;
-}
-
-code {
-  font-family: "JetBrains Mono", monospace;
 }
 
 div.highlight table {
@@ -22,7 +22,7 @@ div.highlight table {
   padding: 0 1rem;
 }
 
-:not(pre)>code {
+:not(pre) > code {
   font-size: 0.8125rem;
   font-weight: 500;
   color: $color-text-primary-80;
