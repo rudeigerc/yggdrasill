@@ -14,5 +14,5 @@ tags = ["minimal", "blog"]
 features = ["blog"]
 
 [author]
-  name = "Yuchen Cheng"
-  homepage = "https://rudeigerc.dev"
+name = "Yuchen Cheng"
+homepage = "https://rudeigerc.dev"

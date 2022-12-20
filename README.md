@@ -14,19 +14,7 @@ The design is partially inspired by:
 
 ## Installation
 
-### With Git Submodules
-
-```shell
-$ git submodule add https://github.com/rudeigerc/yggdrasill themes/yggdrasill
-```
-
-In `config.toml`:
-
-```toml
-theme = "yggdrasill"
-```
-
-### With Hugo Modules
+### Install with Hugo Modules
 
 ```shell
 # Initialize the Hugo module system
@@ -45,6 +33,32 @@ theme = "github.com/rudeigerc/yggdrasill"
 ```
 
 Please refer to the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/) for more information about installation with Hugo modules.
+
+### Install with Git Submodules
+
+```shell
+$ git submodule add https://github.com/rudeigerc/yggdrasill themes/yggdrasill
+```
+
+In `config.toml`:
+
+```toml
+theme = "yggdrasill"
+```
+
+## Update
+
+### Update with Hugo Modules
+
+```shell
+$ hugo mod get -u github.com/rudeigerc/yggdrasill
+```
+
+### Update with Git Submodules
+
+```shell
+$ git submodule update --remote
+```
 
 ## Development
 
