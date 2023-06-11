@@ -7,7 +7,7 @@
     {{ if eq .Title .Site.Title }}
       {{ .Site.Title }}
     {{ else }}
-      {{ with .Title }}{{ . }} |{{ end }}{{ .Site.Title }}
+      {{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}
     {{ end }}
   </title>
 
