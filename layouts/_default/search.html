@@ -1,8 +1,8 @@
 {{ define "main" }}
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <script src="/pagefind/pagefind-ui.js" data-cfasync="false"></script>
   <div id="search"></div>
-  <script>
+  <script data-cfasync="false">
     window.addEventListener('DOMContentLoaded', (event) => {
       new PagefindUI({ element: '#search', showSubResults: true })
     })
