@@ -1,17 +1,19 @@
 {{ define "main" }}
-  <section id="main">
+  <section id="main" data-pagefind-body>
     {{ with .Params.featured_image }}
       <div class="featured-image">
         <img src="{{ . }}" />
       </div>
     {{ end }}
-    <h1 id="title">{{ .Title }}</h1>
+    <h1 id="title" data-pagefind-meta="title">{{ .Title }}</h1>
     <div class="summary-meta">
       <span>
-        {{ .Date.Format "2006-01-02" }}
+        <span data-pagefind-meta="date">{{ .Date.Format "2006-01-02" }}</span>
         {{ range .Params.categories }}
           •
-          <a href="/categories/{{ . | urlize }}">
+          <a
+            href="/categories/{{ . | urlize }}"
+            data-pagefind-filter="category">
             {{ . }}
           </a>
         {{ end }}
@@ -21,7 +23,7 @@
       <div class="tags">
         {{ range . }}
           <a href="/tags/{{ . | urlize }}">
-            <div class="tag">
+            <div class="tag" data-pagefind-filter="tag">
               #{{ . }}
             </div>
           </a>
