@@ -65,8 +65,8 @@ blockquote {
   margin-inline-end: 0;
 
   p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
   }
 }
 
@@ -119,7 +119,7 @@ article#content {
 
   li,
   dt {
-    margin: 0.5rem 0;
+    margin: 0.125rem 0;
     padding: 0;
   }
 }
