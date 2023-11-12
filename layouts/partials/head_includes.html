@@ -51,10 +51,7 @@
 
 {{ partial "font_awesome.html" . }}
 {{ partial "bootstrap.html" . }}
-
-{{ if .Params.mermaid }}
-  {{ partial "mermaid.html" . }}
-{{ end }}
+{{ partial "mermaid.html" . }}
 
 {{ if .Params.katex }}
   {{ partial "katex.html" . }}
