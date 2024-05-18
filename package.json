@@ -13,13 +13,13 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "eslint": "^8.53.0",
+    "eslint": "^8.57.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "prettier-plugin-go-template": "^0.0.13",
     "stylelint": "^15.11.0",
     "stylelint-config-prettier-scss": "^0.0.1",
@@ -27,7 +27,7 @@
   },
   "lint-staged": {
     "*.{js,scss,html}": [
-      "prettier . --write"
+      ""
     ]
   }
 }
