@@ -42,7 +42,7 @@
         {{ .TableOfContents }}
       </aside>
     </div>
-    {{ if not .Site.IsServer }}
+    {{ if not hugo.IsServer }}
       {{ partial "giscus.html" . }}
     {{ end }}
   </section>
